@@ -30,4 +30,7 @@ async function getWeather(city) {
   }
 }
 
+console.log(API_KEY); // Verifica si la clave API está siendo leída correctamente
+
+
 export default getWeather;
