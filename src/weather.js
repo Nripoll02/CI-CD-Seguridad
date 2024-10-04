@@ -11,7 +11,7 @@ async function getWeather(city) {
     throw new Error("City is required");
   }
   
-  const url = `${BASE_URL}?q=${city}&appid=${API_KEY}&units=metric`;
+  const url = `${BASE_URL}?q=${city}&appid=${API_KEY}&units=metric`; // URL completa con la ciudad y la clave de la API
 
   try {
     console.log(`Requesting URL: ${url}`);
