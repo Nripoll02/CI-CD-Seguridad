@@ -20,13 +20,17 @@ jobs:
     # Añade el secret API_KEY al entorno
     - name: Set API_KEY environment variable
       run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
-
+  
     # Instala las dependencias
     - run: npm install
 
     # Da permisos de ejecución a Mocha
     - name: Give execute permissions to Mocha
       run: chmod +x ./node_modules/.bin/mocha
+
+    - name: Debug API_KEY
+      run: echo "API_KEY=${{ secrets.API_KEY }}"
+
 
     # Ejecuta las pruebas
     - run: npm test
