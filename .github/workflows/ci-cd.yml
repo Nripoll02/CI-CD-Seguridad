@@ -20,7 +20,11 @@ jobs:
     # Añade el secret API_KEY al entorno
     - name: Set API_KEY environment variable
       run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
-  
+
+    # Establecer la ciudad como variable de entorno
+    - name: Set CITY environment variable
+      run: echo "CITY=Mendoza" >> $GITHUB_ENV
+
     # Instala las dependencias
     - run: npm install
 
@@ -28,9 +32,13 @@ jobs:
     - name: Give execute permissions to Mocha
       run: chmod +x ./node_modules/.bin/mocha
 
+    # Debug de API_KEY
     - name: Debug API_KEY
       run: echo "API_KEY=${{ secrets.API_KEY }}"
 
+    # Debug de la ciudad (opcional, para verificar que la variable CITY se haya pasado correctamente)
+    - name: Debug CITY
+      run: echo "CITY=${{ env.CITY }}"
 
     # Ejecuta las pruebas
     - run: npm test
