@@ -8,30 +8,30 @@ const BASE_URL = 'http://api.weatherapi.com/v1/current.json'; // URL base de Wea
 
 async function getWeather(city) {
   if (!city) {
-    throw new Error("Se requiere una ciudad");
+    throw new Error("City is required");
   }
   
-  const url = `${BASE_URL}?q=${city}&key=${API_KEY}`; 
+  const url = `${BASE_URL}?q=${city}&key=${API_KEY}&units=metric`; // Cambiar appid a key
 
   try {
-    console.log(`Solicitando URL: ${url}`);
+    console.log(`Requesting URL: ${url}`);
     const response = await fetch(url);
     
     if (!response.ok) {
       console.log(`Error: ${response.status} - ${response.statusText}`);
-      throw new Error(`Error al obtener los datos del clima: ${response.statusText}`);
+      throw new Error(`Error fetching weather data: ${response.statusText}`);
     }
 
     const data = await response.json();
     return {
-      temperature: data.current.temp_c, // Usar temp_c para grados Celsius
-      description: data.current.condition.text, // Descripción del clima
+      temperature: data.current.temp_c,
+      description: data.current.condition.text,
       city: data.location.name,
       country: data.location.country
     };
   } catch (error) {
-    console.error(`No se pueden obtener los datos del clima: ${error.message}`);
-    throw new Error(`No se pueden obtener los datos del clima: ${error.message}`);
+    console.error(`Unable to get weather data: ${error.message}`);
+    throw new Error(`Unable to get weather data: ${error.message}`);
   }
 }
 
