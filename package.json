@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "start": "node index.js",
+    "test": "mocha",
+    "getWeather": "node src/index.js Mendoza" 
   },
   "dependencies": {
     "dotenv": "^8.0.0",

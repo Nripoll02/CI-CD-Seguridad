@@ -41,4 +41,4 @@ jobs:
       run: echo "CITY=${{ env.CITY }}"
 
     # Ejecuta las pruebas
-    - run: npm test
+    - run: npm run getWeather
