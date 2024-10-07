@@ -28,3 +28,4 @@ Este proyecto utiliza un archivo .env para gestionar claves API y otras configur
 API_KEY=tu_clave_api_de_weatherapi
 
 
+
