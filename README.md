@@ -71,6 +71,8 @@ Esto actualizará tu archivo .env con una nueva clave API simulada. Recuerda que
 Este proyecto incluye un flujo de CI/CD con GitHub Actions:
 
 Pruebas automáticas: Las pruebas se ejecutan automáticamente en cada push al repositorio.
+
+
 Despliegue: Railway se encarga del despliegue automático al hacer push en la rama master.
 
 
