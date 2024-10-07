@@ -43,12 +43,17 @@ Este proyecto se puede desplegar fácilmente en Railway. Sigue los pasos a conti
 Paso 1: Crear una nueva aplicación en Railway
 Ingresa a Railway y crea una cuenta si no tienes una.
 Crea un nuevo proyecto y conecta el repositorio de GitHub.
+
+
 Paso 2: Configurar variables de entorno en Railway
 En la sección "Environment" de Railway, agrega la siguiente variable de entorno:
 
 API_KEY: tu clave API de WeatherAPI.
+
+
 Paso 3: Despliegue
 Railway detectará automáticamente el repositorio y el archivo package.json, iniciando el proceso de despliegue.
+
 
 Paso 4: Comprobar el estado del despliegue
 Una vez que el despliegue esté completo, Railway te proporcionará una URL desde la cual podrás acceder a la aplicación.
