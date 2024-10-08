@@ -11,7 +11,7 @@ async function getWeather(city) {
     throw new Error("City is required");
   }
   
-  const url = `${BASE_URL}?q=${city}&key=${API_KEY}&units=metric`; // Cambiar appid a key
+  const url = `${BASE_URL}?q=${city}&key=${API_KEY}&units=metric`; 
 
   try {
     console.log(`Requesting URL: ${url}`);
@@ -30,7 +30,7 @@ async function getWeather(city) {
       country: data.location.country
     };
   } catch (error) {
-    console.error(`Unable to get weather data: ${error.message}`);// Cambiar console.log por console.error
+    console.error(`Unable to get weather data: ${error.message}`);
     throw new Error(`Unable to get weather data: ${error.message}`);
   }
 }
