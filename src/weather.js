@@ -30,7 +30,7 @@ async function getWeather(city) {
       country: data.location.country
     };
   } catch (error) {
-    console.error(`Unable to get weather data: ${error.message}`);
+    console.error(`Unable to get weather data: ${error.message}`);// Cambiar console.log por console.error
     throw new Error(`Unable to get weather data: ${error.message}`);
   }
 }
